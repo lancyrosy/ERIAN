@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Scenario>
+<Scenario RevMajor="2020" RevMinor="0">
+    <Layout Database="/home/erian/VIRES/VTD.2020/Data/Projects/Current/Databases/Germany.2018/NTU_Campus_Full_v08H.opt.osgb" File="/home/erian/VIRES/VTD.2020/Data/Projects/Current/Databases/Germany.2018/NTU_Campus_Full_v08H.xodr"/>
+    <VehicleList ConfigFile="Distros/Current/Config/Players/Vehicles"/>
+    <DriverList ConfigFile="Distros/Current/Config/Players/driverCfg.xml"/>
+    <CharacterList ConfigFile="Distros/Current/Config/Players/Pedestrians"/>
+    <ObjectList ConfigFile="Distros/Current/Config/Players/Objects"/>
+    <DynObjects Path="Distros/Current/Config/DynObjects/Logic"/>
+    <TrafficElements/>
+    <PulkTraffic/>
+    <TrafficControl>
+        <Player>
+            <Description Driver="ComfortableDriver" Control="external" AdaptDriverToVehicleType="true" Type="MB_Citaro_2007_blue" Name="Ego"/>
+            <Init>
+                <Speed Value="5.5555555555555554e+00"/>
+                <PosPathShape/>
+                <PathShapeRef StartS="0.0000000000000000e+00" EndAction="continue" TargetS="2.6715256275989384e+02" PathShapeId="1"/>
+            </Init>
+        </Player>
+        <Player>
+            <Description Driver="DefaultDriver" Control="internal" AdaptDriverToVehicleType="true" Type="BMW_7_2009_black metallic" Name="New Player01"/>
+            <Init>
+                <Speed Value="1.3888888888888888e+00"/>
+                <PosPathShape/>
+                <PathShapeRef StartS="1.0000000000000000e-02" EndAction="continue" TargetS="1.7410202633184872e+02" PathShapeId="2"/>
+            </Init>
+        </Player>
+        <PlayerActions Player="Ego">
+            <Action Name="">
+                <PosAbsolute CounterID="" CounterComp="COMP_EQ" Radius="5.0000000000000000e+00" X="2.8165625000000000e+02" Y="8.4821386718750000e+02" NetDist="false" CounterVal="0" Pivot="Ego"/>
+                <Autonomous Force="true" ExecutionTimes="1" ActiveOnEnter="true" DelayTime="0.0000000000000000e+00"/>
+            </Action>
+            <Action Name="">
+                <PosAbsolute CounterID="" CounterComp="COMP_EQ" Radius="1.2000000000000000e+01" X="2.8102307037677832e+02" Y="8.4747518699179318e+02" NetDist="false" CounterVal="0" Pivot="Ego"/>
+                <SpeedChange Rate="4.0000000000000000e+00" Target="5.5555555555555554e+00" Force="true" ExecutionTimes="1" ActiveOnEnter="true" DelayTime="0.0000000000000000e+00"/>
+            </Action>
+            <Action Name="">
+                <PosAbsolute CounterID="" CounterComp="COMP_EQ" Radius="1.2000000000000000e+01" X="1.7947663879394531e+02" Y="1.0805568237304688e+03" NetDist="false" CounterVal="0" Pivot="Ego"/>
+                <SpeedChange Rate="4.0000000000000000e+00" Target="0.0000000000000000e+00" Force="true" ExecutionTimes="1" ActiveOnEnter="true" DelayTime="0.0000000000000000e+00"/>
+            </Action>
+        </PlayerActions>
+        <PlayerActions Player="New Player01">
+            <Action Name="">
+                <PosAbsolute CounterID="" CounterComp="COMP_EQ" Radius="5.0000000000000000e+00" X="5.1169430131405852e+02" Y="9.2433031946953963e+02" NetDist="false" CounterVal="0" Pivot="New Player01"/>
+                <SpeedChange Rate="4.0000000000000000e+00" Target="1.3888888888888888e+00" Force="true" ExecutionTimes="1" ActiveOnEnter="true" DelayTime="0.0000000000000000e+00"/>
+            </Action>
+            <Action Name="STOP/TOF">
+                <PosAbsolute CounterID="" CounterComp="COMP_EQ" Radius="1.8000000000000000e+01" X="4.8477004594296477e+02" Y="1.0481565523796958e+03" NetDist="false" CounterVal="0" Pivot="New Player01"/>
+                <SpeedChange Rate="4.0000000000000000e+00" Target="0.0000000000000000e+00" Force="true" ExecutionTimes="1" ActiveOnEnter="true" DelayTime="0.0000000000000000e+00"/>
+            </Action>
+        </PlayerActions>
+    </TrafficControl>
+    <MovingObjectsControl>
+        <PathShape ShapeId="1" ShapeType="polyline" Closed="false" Name="PathShape01">
+            <Waypoint X="2.8101782226562500e+02" Y="8.4746667480468750e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="1.0183031279868033e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="3.0621813964843750e+02" Y="8.8834039306640625e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="9.1938648375448007e-01" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="3.2742330932617188e+02" Y="9.1615295410156250e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="8.5052354169125488e-01" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="3.6046032714843750e+02" Y="9.5379980468750000e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="7.5780252023883110e-01" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="3.9340158081054688e+02" Y="9.8497137451171875e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="7.3272663989269549e-01" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.0777371215820312e+02" Y="9.9790399169921875e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="6.6992450565517092e-01" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.1914193725585938e+02" Y="1.0069091186523438e+03" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="1.0758011101185616e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.2184005737304688e+02" Y="1.0119072875976562e+03" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="1.6143211659003376e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.2152804565429688e+02" Y="1.0190713500976562e+03" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="1.9090766930891585e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.1945849609375000e+02" Y="1.0249540405273438e+03" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="2.2775960059525868e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.1480648803710938e+02" Y="1.0304014892578125e+03" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="2.3399471006253076e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.0574758911132812e+02" Y="1.0397596435546875e+03" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="2.4625132640787579e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="3.8576464843750000e+02" Y="1.0558886718750000e+03" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="2.4625132640787579e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+        </PathShape>
+        <PathShape ShapeId="2" ShapeType="polyline" Closed="false" Name="PathShape02">
+            <Waypoint X="5.1255438232421875e+02" Y="9.2350939941406250e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="2.2550881838140722e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="5.0102679443359375e+02" Y="9.3764007568359375e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="2.2825035830997980e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.8819766235351562e+02" Y="9.5251440429687500e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="2.3151218960928945e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.7518261718750000e+02" Y="9.6664501953125000e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="2.4186129808587409e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.6570022583007812e+02" Y="9.7501184082031250e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="2.4047006272212048e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.5566003417968750e+02" Y="9.8412237548828125e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="2.3871132365822887e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.4636358642578125e+02" Y="9.9286102294921875e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="2.2706853392171058e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.4041384887695312e+02" Y="9.9992639160156250e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="2.6779500949154906e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.3557968139648438e+02" Y="1.0023434448242188e+03" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="2.9491286656427564e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.2736633300781250e+02" Y="1.0039440307617188e+03" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="2.0065363371180247e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.2369458007812500e+02" Y="1.0118303222656250e+03" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="1.4563488281406285e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.2459634399414062e+02" Y="1.0196751708984375e+03" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="6.1175922046133169e-01" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.2851437377929688e+02" Y="1.0224238281250000e+03" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="1.6514994487066512e-01" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.3632339477539062e+02" Y="1.0237253417968750e+03" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="6.1783007238202776e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.4338873291015625e+02" Y="1.0229815673828125e+03" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="4.9935717613165259e-01" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.4952438354492188e+02" Y="1.0263283691406250e+03" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="6.0860447558245268e-01" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="4.7800152587890625e+02" Y="1.0461724853515625e+03" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="6.0860447558245268e-01" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+        </PathShape>
+        <PathShape ShapeId="3" ShapeType="polyline" Closed="false" Name="PathShape03">
+            <Waypoint X="9.1677087402343750e+02" Y="9.6152551269531250e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="6.2622233567453049e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.2335620117187500e+02" Y="9.6138745117187500e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="6.2627563875763430e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.2990130615234375e+02" Y="9.6125372314453125e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="6.2642588654953428e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.3725311279296875e+02" Y="9.6111456298828125e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="6.2474179833895489e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.4488110351562500e+02" Y="9.6084161376953125e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="5.1376778428179906e-02" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.5111968994140625e+02" Y="9.6116241455078125e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="3.4559339565736580e-01" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.5814959716796875e+02" Y="9.6369348144531250e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="6.6347158600529454e-01" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.6443658447265625e+02" Y="9.6860791015625000e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="8.9474447745530028e-01" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.6915020751953125e+02" Y="9.7448413085937500e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="1.2819495063426050e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.7102410888671875e+02" Y="9.8079022216796875e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="1.5268402409580779e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.7137969970703125e+02" Y="9.8887469482421875e+02" Options="0x20000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="1.5268402409580779e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+        </PathShape>
+        <PathShape ShapeId="4" ShapeType="polyline" Closed="false" Name="PathShape04">
+            <Waypoint X="9.1674621582031250e+02" Y="9.6159051513671875e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="6.2498684004858234e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.2320697021484375e+02" Y="9.6137518310546875e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="6.2727703086976740e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.3009844970703125e+02" Y="9.6130340576171875e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="6.2730772675871558e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.3720526123046875e+02" Y="9.6123156738281250e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="6.2349159995785719e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.4511596679687500e+02" Y="9.6084942626953125e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="6.1015128622779011e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.5083081054687500e+02" Y="9.5979962158203125e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="2.5543712872262564e-01" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.5661431884765625e+02" Y="9.6130993652343750e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="5.2097514521966393e-01" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.6309777832031250e+02" Y="9.6503051757812500e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="7.5707829546462635e-01" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.6924957275390625e+02" Y="9.7084338378906250e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="1.1597306333516009e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.7225079345703125e+02" Y="9.7772851562500000e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="1.4746071163330245e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+            <Waypoint X="9.7322174072265625e+02" Y="9.8779150390625000e+02" Options="0x00000000" Z="0.0000000000000000e+00" Weight="1.0000000000000000e+00" Yaw="1.4746071163330245e+00" Pitch="0.0000000000000000e+00" Roll="0.0000000000000000e+00"/>
+        </PathShape>
+    </MovingObjectsControl>
+    <LightSigns>
+        <SignalController Id="1" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="2" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="3" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="4" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="6" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="7" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="8" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="9" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="10" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="12" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="13" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="14" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="15" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="16" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="17" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="18" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="19" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="20" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="21" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="22" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="23" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="24" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="25" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="26" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="27" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="28" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <SignalController Id="29" DelayRef="-1" Delay="0.0000000000000000e+00"/>
+        <Signal Id="173"/>
+        <Signal Id="175"/>
+        <Signal Id="176"/>
+        <Signal Id="177"/>
+        <Signal Id="179"/>
+        <Signal Id="180"/>
+        <Signal Id="181"/>
+        <Signal Id="182"/>
+        <Signal Id="183"/>
+        <Signal Id="184"/>
+        <Signal Id="185"/>
+        <Signal Id="186"/>
+        <Signal Id="2527"/>
+        <Signal Id="2528"/>
+        <Signal Id="2540"/>
+        <Signal Id="2541"/>
+        <Signal Id="5560"/>
+        <Signal Id="5561"/>
+        <Signal Id="5574"/>
+        <Signal Id="5575"/>
+        <Signal Id="8594"/>
+        <Signal Id="8595"/>
+        <Signal Id="8602"/>
+        <Signal Id="8603"/>
+        <Signal Id="11611"/>
+        <Signal Id="11612"/>
+        <Signal Id="11613"/>
+        <Signal Id="11614"/>
+        <Signal Id="11615"/>
+        <Signal Id="11616"/>
+        <Signal Id="11617"/>
+        <Signal Id="11618"/>
+        <Signal Id="11619"/>
+        <Signal Id="11620"/>
+        <Signal Id="11621"/>
+        <Signal Id="11622"/>
+        <Signal Id="11623"/>
+        <Signal Id="11624"/>
+        <Signal Id="11625"/>
+        <Signal Id="11626"/>
+        <Signal Id="11628"/>
+        <Signal Id="11629"/>
+        <Signal Id="11630"/>
+        <Signal Id="11631"/>
+        <Signal Id="11632"/>
+        <Signal Id="11633"/>
+        <Signal Id="11634"/>
+        <Signal Id="11635"/>
+        <Signal Id="11636"/>
+        <Signal Id="11638"/>
+        <Signal Id="11639"/>
+        <Signal Id="11640"/>
+        <Signal Id="11641"/>
+        <Signal Id="11642"/>
+        <Signal Id="11643"/>
+        <Signal Id="11644"/>
+        <Signal Id="11645"/>
+        <Signal Id="11646"/>
+    </LightSigns>
+    <Selections/>
+</Scenario>

@@ -1,0 +1,79 @@
+<!-- #################################################################
+     #
+     # configuration file for modules 14.03.2017 by M. Dupuis
+     #
+     # (c)2017 by VIRES Simulationstechnologie GmbH
+     #
+     #################################################################
+-->
+
+<RDB>
+    <Port name="RDBraw" number="48190" type="TCP" />
+</RDB>
+<Debug    enable="true"
+          lightSource="false"
+          driver="false" />
+
+
+<Sensor name="FrontSensor" type="video">
+    <Load     lib="libModulePerfectSensor.so" path="" persistent="true" />
+    <Frustum  near="1.0" far="150.0" left="15.0" right="15.0" bottom="7.5" top="7.5" />
+    <Cull     maxObjects="5" enable="true" />
+    <Port     name="RDBout" number="48195" type="TCP" sendEgo="false" />
+    <Player   name="Ego" />
+    <Position dx="3.5" dy="0.0" dz="0.5" dhDeg="0.0" dpDeg="0.0" drDeg="0.0" />
+    <Origin type="sensor" />
+    <Database resolveRepeatedObjects="true" continuousObjectTesselation="2.0" />
+    <Filter   objectType="vehicle"/>
+    <Debug    enable="false"
+              detection="false"
+              road="false"  
+              position="true"
+              dimensions="false" 
+              camera="false" 
+              CSV="false"
+              packages="false"
+              culling="true"
+              contactPoints="false"
+              trafficSigns="false"/>
+</Sensor>
+
+<Sensor name="FrontSensor_Truck" type="video">
+    <Load     lib="libModulePerfectSensor.so" path="" persistent="true" />
+    <Frustum  near="1.0" far="150.0" left="15.0" right="15.0" bottom="7.5" top="7.5" />
+    <Cull     maxObjects="5" enable="true" />
+    <Port     name="RDBout" number="48196" type="TCP" sendEgo="false" />
+    <Player   name="Ego" />
+    <Position dx="4.7" dy="0.0" dz="1" dhDeg="0.0" dpDeg="0.0" drDeg="0.0" />
+    <Origin type="sensor" />
+    <Database resolveRepeatedObjects="true" continuousObjectTesselation="2.0" />
+    <Filter   objectType="vehicle"/>
+    <Debug    enable="false"
+              detection="false"
+              road="false"  
+              position="true"
+              dimensions="false" 
+              camera="false" 
+              CSV="false"
+              packages="false"
+              culling="true"
+              contactPoints="false"
+              trafficSigns="false"/>
+</Sensor>
+
+<!--DynamicsPlugin name="viTrafficDyn">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   default="true" />
+    <Debug    enable="false" />
+</DynamicsPlugin-->
+
+<!--
+<DynamicsPlugin name="viTrafficDynComplex">
+    <Load     lib="libModuleTrafficDynComplex.so" path=""/>
+    <Player   default="true" />
+    <Debug    enable="false"
+              dynInput="true"
+              dynOutput="true"
+              CSV="false"
+              packages="true"/>
+</DynamicsPlugin>-->
