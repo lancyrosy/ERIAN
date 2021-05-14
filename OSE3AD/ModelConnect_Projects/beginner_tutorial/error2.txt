@@ -1,0 +1,47 @@
+**********************************************************************
+*********                                                    *********
+*********     MCX   (Model.CONNECT Execution Engine)         *********
+*********                                                    *********
+********* Version:         2020 R1                           *********
+*********                                                    *********
+********* Program started: Tue, 19.01.2021 14:57:12          *********
+*********                                                    *********
+********* Build:           Apr  9 2020-17:47:57              *********
+*********                  mcx: ba7324a, devenv:             *********
+*********                                                    *********
+********* OS Name:         Windows                           *********
+*********                                                    *********
+********* Architecture:    64 bit                            *********
+*********                                                    *********
+**********************************************************************
+ 
+ 
+******************** Locations: **************************************
+ 
+Executable: C:\Program Files (x86)\AVL\R2020.1\MC\bin\bin.x86_64-unknown-winnt_i16v15\mcx.exe
+Working directory: C:\Users\erianguest\Desktop\fmu_modelConnect\simulation\Model_CONNECT_1\Model_CONNECT_2.Case_set_1.Case_1
+Model input file: model.asix
+Given (relative) path to model: .
+Absolute path to model: C:\Users\erianguest\Desktop\fmu_modelConnect\simulation\Model_CONNECT_1\Model_CONNECT_2.Case_set_1.Case_1
+Warning: In input file, line 142: Deprecated input format of node array_parameters
+Temporary directory: c:\users\eriang~1\appdata\local\temp\tmp0d3peg
+ 
+ 
+******************** Read data: **************************************
+ 
+Reading settings:
+  Start time: 0 s
+  End time: 10 s
+  Simulation stops if an element stops
+  Synchronization time step: 0.01 s
+  Type: Parallel Co-simulation
+ 
+  Epsilon: 1e-08
+ 
+Result directory: results
+Reading model elements
+FMU 2: XML specifies FMI standard version 2.0
+FMU 2: Loading 'win64' binary with 'default' platform types
+FMU 2: [logAll][FMU status:OK] pre init
+ERROR: The element FMU 2 caused an unrecoverable error.
+ERROR: Shutting down.

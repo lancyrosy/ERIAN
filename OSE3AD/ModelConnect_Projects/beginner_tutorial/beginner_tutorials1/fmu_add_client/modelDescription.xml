@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fmiModelDescription
+  fmiVersion="2.0"
+  modelName="add_client"
+  guid="{86D3BE8A-5658-4009-8545-5E7FB46CC77E}"
+  numberOfEventIndicators="0">
+
+<CoSimulation
+  modelIdentifier="add_client"
+  canHandleVariableCommunicationStepSize="true"/>
+
+<LogCategories>
+  <Category name="logAll"/>
+  <Category name="logError"/>
+  <Category name="logFmiCall"/>
+  <Category name="logEvent"/>
+</LogCategories>
+
+<!-- Add your channels accordingly to your list but make sure to keep the ModelVariables consistent with the
+     fmi2GetX and fmi2SetX Functions. -->
+<ModelVariables>
+  <!--1--><ScalarVariable name="in1" valueReference="0" description="out" causality="input">
+    <Real start="0"/>
+  </ScalarVariable>
+  <!--2--><ScalarVariable name="in2" valueReference="1" description="in2" causality="input">
+    <Real start="0"/>
+  </ScalarVariable>
+  <!--3--><ScalarVariable name="out" valueReference="2" description="out" causality="output">
+    <Real />
+  </ScalarVariable>
+</ModelVariables>
+
+<ModelStructure>
+  <Outputs>
+    <Unknown index="3"/>
+  </Outputs>
+  <InitialUnknowns>
+    <Unknown index="3"/>
+  </InitialUnknowns> 
+</ModelStructure>
+
+</fmiModelDescription>

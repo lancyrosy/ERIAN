@@ -1,0 +1,302 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<AST_input_data>
+  <AST_information/>
+  <task>
+    <start_time t="float" u="time~s" v="0.0"/>
+    <end_time t="float" u="time~s" v="4.0"/>
+    <end_type t="string" v="first_component"/>
+    <delta_time t="float" u="time~s" v="0.1"/>
+    <relative_eps t="float" v="1e-08"/>
+    <step_type t="string" v="parallel_fast"/>
+    <input_at_end_time t="bool" v="false"/>
+    <results>
+      <output_directory t="string" v="./results"/>
+      <timing_output t="bool" v="false"/>
+      <result_level t="string" v="coupling"/>
+      <backends>
+        <backend t="string" v="mat"/>
+      </backends>
+    </results>
+  </task>
+  <model>
+    <components>
+      <component>
+        <type t="string" v="SIGNAL_TABLE"/>
+        <name t="string" v="Signal table 1"/>
+        <outports>
+          <outport>
+            <name t="string" v="Output"/>
+            <unit t="string" v="no_unit~none"/>
+            <type t="string" v="float"/>
+            <id t="string" v="Signal table 1.Output"/>
+            <write_results t="bool" v="true"/>
+          </outport>
+        </outports>
+        <specific_data>
+          <boundary_table map_type="interpolated_function" orientation="column" type="map">0.0	0.0
+1.0	1.0<abscissa data_type="float" extrapolation_type="linear" index="1" interpolation_type="linear" type="map_abscissa"/><ordinate_1 data_type="float" index="2" type="map_ordinate"/></boundary_table>
+        </specific_data>
+        <results>
+          <result_level t="string" v="coupling"/>
+          <step_count t="int" v="1"/>
+        </results>
+      </component>
+      <component>
+        <type t="string" v="CONSTANT"/>
+        <name t="string" v="Constant 1"/>
+        <outports>
+          <outport>
+            <name t="string" v="Output"/>
+            <unit t="string" v="no_unit~none"/>
+            <type t="string" v="float"/>
+            <id t="string" v="Constant 1.Output"/>
+            <initial t="float" v="1.0"/>
+            <write_results t="bool" v="true"/>
+          </outport>
+        </outports>
+        <specific_data>
+          <values>
+            <constant_value t="float" v="1.0"/>
+          </values>
+        </specific_data>
+        <results>
+          <result_level t="string" v="coupling"/>
+          <step_count t="int" v="1"/>
+        </results>
+      </component>
+      <component>
+        <type t="string" v="FMU"/>
+        <name t="string" v="mapping"/>
+        <inports>
+          <inport>
+            <name t="string" v="in1"/>
+            <name_in_model t="string" v="in1"/>
+            <unit t="string" v="no_unit~none"/>
+            <type t="string" v="float"/>
+            <id t="string" v="mapping.in1"/>
+            <write_results t="bool" v="true"/>
+            <default t="float" v="0.0"/>
+          </inport>
+          <inport>
+            <name t="string" v="in2"/>
+            <name_in_model t="string" v="in2"/>
+            <unit t="string" v="no_unit~none"/>
+            <type t="string" v="float"/>
+            <id t="string" v="mapping.in2"/>
+            <write_results t="bool" v="true"/>
+            <default t="float" v="0.0"/>
+          </inport>
+          <inport>
+            <name t="string" v="in3"/>
+            <unit t="string" v="no_unit~none"/>
+            <type t="string" v="float"/>
+            <id t="string" v="mapping.in3"/>
+            <write_results t="bool" v="true"/>
+          </inport>
+        </inports>
+        <outports>
+          <outport>
+            <name t="string" v="out1"/>
+            <name_in_model t="string" v="out1"/>
+            <unit t="string" v="no_unit~none"/>
+            <type t="string" v="float"/>
+            <id t="string" v="mapping.out1"/>
+            <write_results t="bool" v="true"/>
+          </outport>
+          <outport>
+            <name t="string" v="out2"/>
+            <name_in_model t="string" v="out2"/>
+            <unit t="string" v="no_unit~none"/>
+            <type t="string" v="float"/>
+            <id t="string" v="mapping.out2"/>
+            <write_results t="bool" v="true"/>
+          </outport>
+          <outport>
+            <name t="string" v="out3"/>
+            <name_in_model t="string" v="out3"/>
+            <unit t="string" v="no_unit~none"/>
+            <type t="string" v="float"/>
+            <id t="string" v="mapping.out3"/>
+            <write_results t="bool" v="true"/>
+          </outport>
+        </outports>
+        <specific_data>
+          <fmu_model_name t="string" v="mapping_fmu"/>
+          <fmu_file t="string" v="../../../mapping_files/modeling/components/FMU/mapping_fmu.fmu"/>
+          <fmu_logging t="bool" v="false"/>
+          <avl_fmu t="bool" v="false"/>
+          <parameters/>
+          <initial_values/>
+          <model_internal_variables t="bool" v="false"/>
+        </specific_data>
+        <results>
+          <result_level t="string" v="coupling"/>
+          <step_count t="int" v="1"/>
+        </results>
+      </component>
+      <component>
+        <type t="string" v="MONITOR"/>
+        <name t="string" v="Monitor 1"/>
+        <inports>
+          <inport>
+            <name t="string" v="out"/>
+            <unit t="string" v="no_unit~none"/>
+            <type t="string" v="float"/>
+            <id t="string" v="Monitor 1.out"/>
+            <initial t="float" v="1.0"/>
+            <write_results t="bool" v="true"/>
+          </inport>
+        </inports>
+        <results>
+          <result_level t="string" v="coupling"/>
+          <step_count t="int" v="1"/>
+        </results>
+      </component>
+      <component>
+        <type t="string" v="CONSTANT"/>
+        <name t="string" v="Constant 2"/>
+        <outports>
+          <outport>
+            <name t="string" v="Output"/>
+            <unit t="string" v="no_unit~none"/>
+            <type t="string" v="float"/>
+            <id t="string" v="Constant 2.Output"/>
+            <initial t="float" v="1.0"/>
+            <write_results t="bool" v="true"/>
+          </outport>
+        </outports>
+        <specific_data>
+          <values>
+            <constant_value t="float" v="1.0"/>
+          </values>
+        </specific_data>
+        <results>
+          <result_level t="string" v="coupling"/>
+          <step_count t="int" v="1"/>
+        </results>
+      </component>
+      <component>
+        <type t="string" v="MONITOR"/>
+        <name t="string" v="Monitor 2"/>
+        <inports>
+          <inport>
+            <name t="string" v="out"/>
+            <unit t="string" v="no_unit~none"/>
+            <type t="string" v="float"/>
+            <id t="string" v="Monitor 2.out"/>
+            <initial t="float" v="1.0"/>
+            <write_results t="bool" v="true"/>
+          </inport>
+        </inports>
+        <results>
+          <result_level t="string" v="coupling"/>
+          <step_count t="int" v="1"/>
+        </results>
+      </component>
+      <component>
+        <type t="string" v="MONITOR"/>
+        <name t="string" v="Monitor 3"/>
+        <inports>
+          <inport>
+            <name t="string" v="out"/>
+            <unit t="string" v="no_unit~none"/>
+            <type t="string" v="float"/>
+            <id t="string" v="Monitor 3.out"/>
+            <initial t="float" v="1.0"/>
+            <write_results t="bool" v="true"/>
+          </inport>
+        </inports>
+        <results>
+          <result_level t="string" v="coupling"/>
+          <step_count t="int" v="1"/>
+        </results>
+      </component>
+    </components>
+    <connections>
+      <directed_connection>
+        <from_component t="string" v="Signal table 1"/>
+        <from_channel t="string" v="Output"/>
+        <to_component t="string" v="mapping"/>
+        <to_channel t="string" v="in1"/>
+        <inter_extrapolation t="string" v="polynomial">
+          <extrapolate t="string" v="macro"/>
+          <interpolate t="string" v="micro"/>
+          <interpolation_order t="string" v="first"/>
+          <extrapolation_order t="string" v="zero"/>
+          <correction t="string" v="none"/>
+        </inter_extrapolation>
+        <decoupling t="string" v="ifneeded"/>
+      </directed_connection>
+      <directed_connection>
+        <from_component t="string" v="Constant 1"/>
+        <from_channel t="string" v="Output"/>
+        <to_component t="string" v="mapping"/>
+        <to_channel t="string" v="in2"/>
+        <inter_extrapolation t="string" v="polynomial">
+          <extrapolate t="string" v="macro"/>
+          <interpolate t="string" v="micro"/>
+          <interpolation_order t="string" v="first"/>
+          <extrapolation_order t="string" v="zero"/>
+          <correction t="string" v="none"/>
+        </inter_extrapolation>
+        <decoupling t="string" v="ifneeded"/>
+      </directed_connection>
+      <directed_connection>
+        <from_component t="string" v="mapping"/>
+        <from_channel t="string" v="out1"/>
+        <to_component t="string" v="Monitor 1"/>
+        <to_channel t="string" v="out"/>
+        <inter_extrapolation t="string" v="polynomial">
+          <extrapolate t="string" v="macro"/>
+          <interpolate t="string" v="micro"/>
+          <interpolation_order t="string" v="first"/>
+          <extrapolation_order t="string" v="zero"/>
+          <correction t="string" v="none"/>
+        </inter_extrapolation>
+        <decoupling t="string" v="ifneeded"/>
+      </directed_connection>
+      <directed_connection>
+        <from_component t="string" v="mapping"/>
+        <from_channel t="string" v="out2"/>
+        <to_component t="string" v="Monitor 2"/>
+        <to_channel t="string" v="out"/>
+        <inter_extrapolation t="string" v="polynomial">
+          <extrapolate t="string" v="macro"/>
+          <interpolate t="string" v="micro"/>
+          <interpolation_order t="string" v="first"/>
+          <extrapolation_order t="string" v="zero"/>
+          <correction t="string" v="none"/>
+        </inter_extrapolation>
+        <decoupling t="string" v="ifneeded"/>
+      </directed_connection>
+      <directed_connection>
+        <from_component t="string" v="mapping"/>
+        <from_channel t="string" v="out3"/>
+        <to_component t="string" v="Monitor 3"/>
+        <to_channel t="string" v="out"/>
+        <inter_extrapolation t="string" v="polynomial">
+          <extrapolate t="string" v="macro"/>
+          <interpolate t="string" v="micro"/>
+          <interpolation_order t="string" v="first"/>
+          <extrapolation_order t="string" v="zero"/>
+          <correction t="string" v="none"/>
+        </inter_extrapolation>
+        <decoupling t="string" v="ifneeded"/>
+      </directed_connection>
+      <directed_connection>
+        <from_component t="string" v="Constant 2"/>
+        <from_channel t="string" v="Output"/>
+        <to_component t="string" v="mapping"/>
+        <to_channel t="string" v="in3"/>
+        <inter_extrapolation t="string" v="polynomial">
+          <extrapolate t="string" v="macro"/>
+          <interpolate t="string" v="micro"/>
+          <interpolation_order t="string" v="first"/>
+          <extrapolation_order t="string" v="zero"/>
+          <correction t="string" v="none"/>
+        </inter_extrapolation>
+        <decoupling t="string" v="ifneeded"/>
+      </directed_connection>
+    </connections>
+  </model>
+</AST_input_data>

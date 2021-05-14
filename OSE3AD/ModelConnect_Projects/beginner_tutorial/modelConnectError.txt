@@ -1,0 +1,52 @@
+**********************************************************************
+*********                                                    *********
+*********     MCX   (Model.CONNECT Execution Engine)         *********
+*********                                                    *********
+********* Version:         2020 R1                           *********
+*********                                                    *********
+********* Program started: Fri, 08.01.2021 14:06:07          *********
+*********                                                    *********
+********* Build:           Apr  9 2020-17:47:57              *********
+*********                  mcx: ba7324a, devenv:             *********
+*********                                                    *********
+********* OS Name:         Windows                           *********
+*********                                                    *********
+********* Architecture:    64 bit                            *********
+*********                                                    *********
+**********************************************************************
+ 
+ 
+******************** Locations: **************************************
+ 
+Executable: C:\Program Files (x86)\AVL\R2020.1\MC\bin\bin.x86_64-unknown-winnt_i16v15\mcx.exe
+Working directory: C:\Users\erianguest\Desktop\ros\src\beginner_tutorials\fmu_add_client\fmu\simulation\Model_CONNECT_1\Model_CONNECT_1.Case_set_1.Case_1
+Model input file: model.asix
+Given (relative) path to model: .
+Absolute path to model: C:\Users\erianguest\Desktop\ros\src\beginner_tutorials\fmu_add_client\fmu\simulation\Model_CONNECT_1\Model_CONNECT_1.Case_set_1.Case_1
+Warning: In input file, line 62: Deprecated input format of node array_parameters
+Temporary directory: c:\users\eriang~1\appdata\local\temp\tmp_hbrkd
+ 
+ 
+******************** Read data: **************************************
+ 
+Reading settings:
+  Start time: 0 s
+  End time: 10 s
+  Simulation stops if an element stops
+  Synchronization time step: 0.01 s
+  Type: Parallel Co-simulation
+ 
+  Epsilon: 1e-08
+ 
+Result directory: results
+Reading model elements
+FMU 1: XML specifies FMI standard version 2.0
+FMU 1: Loading 'win64' binary with 'default' platform types
+ERROR: FMU 1: Could not load the DLL: The specified module could not be found.
+
+ERROR: 
+ERROR: FMU 1: Could not load FMU dll
+ERROR: FMU 1: Setting up FMU Information failed
+ERROR: Model: Could not read specific data of element FMU 1
+ERROR: Model: Reading elements failed
+**********************************************************************
