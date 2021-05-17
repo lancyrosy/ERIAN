@@ -1,6 +1,17 @@
 # ERIAN
 This Github workspace covers Shiyu's documentation and materials of ERIAN
 
+## Learning Doc Folder
+- Autoware.pdf 
+- Commands_in_Linux.pdf
+- Image_Labeling.pdf
+- Rosbag_with_ImageLabel.pdf
+- Rosbridge.pdf
+- Rosdep_Debugging.pdf
+- RosMaster__Slave.pdf
+- Ros_in_Windows.pdf
+- ROS_Overall.pdf
+
 ## OSE3AD Folder
 There are three designs for FMU: <br/>
 FMU design 1 : Install autoware in Linux and connect Window ROS with it through Master & Slave <br/>
